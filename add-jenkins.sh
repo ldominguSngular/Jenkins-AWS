@@ -6,7 +6,7 @@ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key	#add the jenkin
 #Install dependencies
 yum install java-1.8.0-openjdk -y #install the java 8 dependency
 alternatives --set java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java #better way of updating the alternative
-yum install git #install git, optional
+yum install git -y #install git, optional
 yum install jenkins -y	#install jenkins
 ##echo 2| alternatives --config java	#update the java 8 alternative dependecy
 service jenkins start	#start the jenkins server
